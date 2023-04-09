@@ -25,6 +25,8 @@
 
 package org.java_websocket.exceptions;
 
+import java.io.Serial;
+
 /**
  * exception which indicates that a invalid data was received
  */
@@ -33,63 +35,64 @@ public class InvalidDataException extends Exception {
   /**
    * Serializable
    */
+  @Serial
   private static final long serialVersionUID = 3731842424390998726L;
 
   /**
-   * attribute which closecode will be returned
+   * attribute which closeCode will be returned
    */
-  private final int closecode;
+  private final int closeCode;
 
   /**
    * constructor for a InvalidDataException
    *
-   * @param closecode the closecode which will be returned
+   * @param closeCode the closeCode which will be returned
    */
-  public InvalidDataException(int closecode) {
-    this.closecode = closecode;
+  public InvalidDataException(int closeCode) {
+    this.closeCode = closeCode;
   }
 
   /**
    * constructor for a InvalidDataException.
    *
-   * @param closecode the closecode which will be returned.
+   * @param closeCode the closeCode which will be returned.
    * @param s         the detail message.
    */
-  public InvalidDataException(int closecode, String s) {
+  public InvalidDataException(int closeCode, String s) {
     super(s);
-    this.closecode = closecode;
+    this.closeCode = closeCode;
   }
 
   /**
    * constructor for a InvalidDataException.
    *
-   * @param closecode the closecode which will be returned.
+   * @param closeCode the closeCode which will be returned.
    * @param t         the throwable causing this exception.
    */
-  public InvalidDataException(int closecode, Throwable t) {
+  public InvalidDataException(int closeCode, Throwable t) {
     super(t);
-    this.closecode = closecode;
+    this.closeCode = closeCode;
   }
 
   /**
    * constructor for a InvalidDataException.
    *
-   * @param closecode the closecode which will be returned.
+   * @param closeCode the closeCode which will be returned.
    * @param s         the detail message.
    * @param t         the throwable causing this exception.
    */
-  public InvalidDataException(int closecode, String s, Throwable t) {
+  public InvalidDataException(int closeCode, String s, Throwable t) {
     super(s, t);
-    this.closecode = closecode;
+    this.closeCode = closeCode;
   }
 
   /**
-   * Getter closecode
+   * Getter closeCode
    *
-   * @return the closecode
+   * @return the closeCode
    */
   public int getCloseCode() {
-    return closecode;
+    return closeCode;
   }
 
 }

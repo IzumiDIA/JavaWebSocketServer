@@ -50,7 +50,7 @@ public interface IProtocol {
    * @return the specific Sec-WebSocket-Protocol header for this protocol
    * @since 1.3.7
    */
-  String getProvidedProtocol();
+  String providedProtocol();
 
   /**
    * To prevent protocols to be used more than once the Websocket implementation should call this

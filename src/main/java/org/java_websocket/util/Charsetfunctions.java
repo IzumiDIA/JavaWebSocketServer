@@ -86,7 +86,7 @@ public class Charsetfunctions {
 
   /**
    * Implementation of the "Flexible and Economical UTF-8 Decoder" algorithm by Björn Höhrmann
-   * (http://bjoern.hoehrmann.de/utf-8/decoder/dfa/)
+   * (<a href="http://bjoern.hoehrmann.de/utf-8/decoder/dfa/">...</a>)
    */
   private static final int[] utf8d = {
       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -120,7 +120,7 @@ public class Charsetfunctions {
    * Check if the provided BytebBuffer contains a valid utf8 encoded string.
    * <p>
    * Using the algorithm "Flexible and Economical UTF-8 Decoder" by Björn Höhrmann
-   * (http://bjoern.hoehrmann.de/utf-8/decoder/dfa/)
+   * (<a href="http://bjoern.hoehrmann.de/utf-8/decoder/dfa/">...</a>)
    *
    * @param data the ByteBuffer
    * @param off  offset (for performance reasons)

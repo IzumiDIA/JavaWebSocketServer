@@ -173,9 +173,9 @@ public abstract class Draft {
           .format("Invalid status line received: %s Status line: %s", firstLineTokens[0], line));
     }
     HandshakeBuilder handshake = new HandshakeImpl1Server();
-    ServerHandshakeBuilder serverhandshake = (ServerHandshakeBuilder) handshake;
-    serverhandshake.setHttpStatus(Short.parseShort(firstLineTokens[1]));
-    serverhandshake.setHttpStatusMessage(firstLineTokens[2]);
+    ServerHandshakeBuilder serverHandshake = (ServerHandshakeBuilder) handshake;
+    serverHandshake.setHttpStatus(Short.parseShort(firstLineTokens[1]));
+    serverHandshake.setHttpStatusMessage(firstLineTokens[2]);
     return handshake;
   }
 
@@ -218,7 +218,7 @@ public abstract class Draft {
       continuousFrameType = op;
       if (op == Opcode.BINARY) {
         bui = new BinaryFrame();
-      } else if (op == Opcode.TEXT) {
+      } else {
         bui = new TextFrame();
       }
     }
@@ -257,8 +257,8 @@ public abstract class Draft {
    */
   @Deprecated
   public List<ByteBuffer> createHandshake(Handshakedata handshakedata, Role ownrole,
-      boolean withcontent) {
-    return createHandshake(handshakedata, withcontent);
+      boolean withContent) {
+    return createHandshake(handshakedata, withContent);
   }
 
   public List<ByteBuffer> createHandshake(Handshakedata handshakedata, boolean withcontent) {
