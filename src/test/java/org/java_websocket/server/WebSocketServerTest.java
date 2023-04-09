@@ -120,7 +120,7 @@ public class WebSocketServerTest {
 	
 	@Test
 	public void testGetDrafts() {
-		List<Draft> draftCollection = Collections.<Draft>singletonList(new Draft_6455());
+		final var draftCollection = Collections.<Draft>singletonList(new Draft_6455());
 		Collection<WebSocket> webSocketCollection = new HashSet<WebSocket>();
 		InetSocketAddress inetAddress = new InetSocketAddress(1337);
 		MyWebSocketServer server = new MyWebSocketServer(inetAddress, 1, draftCollection,
@@ -201,9 +201,9 @@ public class WebSocketServerTest {
 		
 		private CountDownLatch serverLatch = null;
 		
-		public MyWebSocketServer(InetSocketAddress address, int decodercount, List<Draft> drafts,
-		                         Collection<WebSocket> connectionscontainer) {
-			super(address, decodercount, drafts, connectionscontainer);
+		public MyWebSocketServer(InetSocketAddress address, int decoderCount, List<Draft> drafts,
+		                         Collection<WebSocket> connectionsContainer) {
+			super(address, decoderCount, drafts, connectionsContainer);
 		}
 		
 		public MyWebSocketServer(int port, CountDownLatch serverLatch) {
