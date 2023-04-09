@@ -34,8 +34,8 @@ import org.junit.runners.Suite;
     org.java_websocket.extensions.DefaultExtensionTest.class,
     org.java_websocket.extensions.CompressionExtensionTest.class
 })
-/**
- * Start all tests for extensions
+/*
+  Start all tests for extensions
  */
 public class AllExtensionTests {
 

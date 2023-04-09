@@ -33,7 +33,7 @@ import java.nio.channels.SocketChannel;
 /**
  * @deprecated
  */
-@Deprecated
+@Deprecated(forRemoval = true)
 public class AbstractWrappedByteChannel implements WrappedByteChannel {
 
   private final ByteChannel channel;

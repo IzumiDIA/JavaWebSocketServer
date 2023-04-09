@@ -5,7 +5,6 @@ module org.java_websocket {
     requires transitive org.slf4j;
 
     exports org.java_websocket;
-    exports org.java_websocket.client;
     exports org.java_websocket.drafts;
     exports org.java_websocket.enums;
     exports org.java_websocket.exceptions;
